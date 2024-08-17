@@ -3,7 +3,14 @@ import { Inter } from "next/font/google";
 import freighterApi from "@stellar/freighter-api";
 import { WalletData } from "@/components/molecules";
 import { Button } from "@/components/ui/button";
-import { fetchPoll, fetchVoter, vote, deposit } from "../components/soroban";
+import {
+  fetchPoll,
+  fetchVoter,
+  vote,
+  deposit,
+  initializeContract,
+  getBalance,
+} from "../components/soroban";
 
 import {
   isConnected,
@@ -12,6 +19,7 @@ import {
   signTransaction,
 } from "@stellar/freighter-api";
 import { Soroban } from "@stellar/stellar-sdk";
+import { useEffect } from "react";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,6 +28,10 @@ export default function Home() {
     let value = 5000;
     await deposit(value);
   };
+
+  useEffect(() => {
+    // getBalance();
+  }, []);
 
   return (
     <main
@@ -57,6 +69,12 @@ export default function Home() {
 
             <div className="w-full flex justify-end space-x-4">
               <Button
+                onClick={initializeContract}
+                className="h-8 items-center flex bg-indigo-600"
+              >
+                Initialize Contract
+              </Button>
+              <Button
                 onClick={depositFunds}
                 className="h-8 items-center flex bg-indigo-600"
               >
@@ -83,7 +101,7 @@ export default function Home() {
           </div>
         </div>
         <div className="rounded-lg overflow-hidden bg-white h-72 flex flex-col space-y-4 shadow-sm">
-          <img src="/loans2.png" />
+          {/* <img src="/loans2.png" /> */}
         </div>
 
         {/* <ul role="list" className="link-card-grid">

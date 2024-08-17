@@ -12,7 +12,11 @@ import { getAddress } from '@stellar/freighter-api';
 
 
 let rpcUrl = "https://soroban-testnet.stellar.org";
-let contractAddress = 'CAAN5X32XWBIX3Q52BR4AJDVBAXPC5M3MVVPAVE5HVES2VWJBPO573L2';
+let contractAddress = 'CDLCXVC4JPATLFEOQGY736RQLT3MWMM2QC46CRI36FL4HZA35UU3E5UO';
+let usdcAddress = "GBBD47IF6LWK7P7MDEVSCWR7DPUWV3NY3DTQEVFL4NAT4AQH3ZLLFLA5"
+
+let tokenWasmHash = "c6fe61fb6c64cbe3e23cb52b059d43545875cf1bc2d396c6d901cfa51a712033"
+let customUsdcAddress = "CD7DUUEY7CJ3K62T5N3WD7KMGKJMMRRKLH3B27Z2MHQT2VR2IPQABZHM"
 
 const stringToSymbol = (value) => {
     return nativeToScVal(value, { type: "symbol" })
@@ -105,14 +109,26 @@ async function deposit(value) {
     return result;
 }
 
-async function initialize(value) {
+async function initializeContract(value) {
     let caller = await getAddress();
-    let selected = stringToSymbol(value);
-    let voter = accountToScVal(caller);
-    let values = [voter, selected];
-    let result = await contractInt(caller, 'record_votes', values);
+    // token_wasm_hash: BytesN<32>, 
+    // usdc: Address, 
+    // admin: Address, 
+    // insurance: Address
+    let hash = stringToSymbol(tokenWasmHash);
+    let admin = accountToScVal(caller.address);
+    let insurance = accountToScVal(caller.address)
+    let usdc = accountToScVal(customUsdcAddress);
+    let values = [hash, usdc, admin, insurance];
+    let result = await contractInt(caller.address, 'initialize', values);
     return result;
 }
 
+async function getBalance() {
+    let caller = await getAddress();
+    let result = await contractInt(caller.address, 'get_balance_usdc', null);
+    console.log("result",result);
+    return result;
+}
 
-export { fetchPoll, fetchVoter, vote, deposit };
+export { fetchPoll, fetchVoter, vote, deposit, initializeContract,getBalance };
