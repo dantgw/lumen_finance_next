@@ -1,0 +1,10 @@
+/Users/daniel/Documents/projects/lumen_finance_next/contracts_soroban/lumen_finance/target/release/deps/libversion_check-4ca8a0b0f5d01e97.rmeta: /Users/daniel/.cargo/registry/src/index.crates.io-6f17d22bba15001f/version_check-0.9.5/src/lib.rs /Users/daniel/.cargo/registry/src/index.crates.io-6f17d22bba15001f/version_check-0.9.5/src/version.rs /Users/daniel/.cargo/registry/src/index.crates.io-6f17d22bba15001f/version_check-0.9.5/src/channel.rs /Users/daniel/.cargo/registry/src/index.crates.io-6f17d22bba15001f/version_check-0.9.5/src/date.rs
+
+/Users/daniel/Documents/projects/lumen_finance_next/contracts_soroban/lumen_finance/target/release/deps/libversion_check-4ca8a0b0f5d01e97.rlib: /Users/daniel/.cargo/registry/src/index.crates.io-6f17d22bba15001f/version_check-0.9.5/src/lib.rs /Users/daniel/.cargo/registry/src/index.crates.io-6f17d22bba15001f/version_check-0.9.5/src/version.rs /Users/daniel/.cargo/registry/src/index.crates.io-6f17d22bba15001f/version_check-0.9.5/src/channel.rs /Users/daniel/.cargo/registry/src/index.crates.io-6f17d22bba15001f/version_check-0.9.5/src/date.rs
+
+/Users/daniel/Documents/projects/lumen_finance_next/contracts_soroban/lumen_finance/target/release/deps/version_check-4ca8a0b0f5d01e97.d: /Users/daniel/.cargo/registry/src/index.crates.io-6f17d22bba15001f/version_check-0.9.5/src/lib.rs /Users/daniel/.cargo/registry/src/index.crates.io-6f17d22bba15001f/version_check-0.9.5/src/version.rs /Users/daniel/.cargo/registry/src/index.crates.io-6f17d22bba15001f/version_check-0.9.5/src/channel.rs /Users/daniel/.cargo/registry/src/index.crates.io-6f17d22bba15001f/version_check-0.9.5/src/date.rs
+
+/Users/daniel/.cargo/registry/src/index.crates.io-6f17d22bba15001f/version_check-0.9.5/src/lib.rs:
+/Users/daniel/.cargo/registry/src/index.crates.io-6f17d22bba15001f/version_check-0.9.5/src/version.rs:
+/Users/daniel/.cargo/registry/src/index.crates.io-6f17d22bba15001f/version_check-0.9.5/src/channel.rs:
+/Users/daniel/.cargo/registry/src/index.crates.io-6f17d22bba15001f/version_check-0.9.5/src/date.rs:

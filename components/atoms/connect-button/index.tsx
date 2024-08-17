@@ -1,10 +1,10 @@
-import React from 'react'
-import { setAllowed } from '@stellar/freighter-api'
-import styles from './style.module.css'
+import React from "react";
+import { setAllowed, requestAccess } from "@stellar/freighter-api";
+import styles from "./style.module.css";
 
 export interface ConnectButtonProps {
-  label: string
-  isHigher?: boolean
+  label: string;
+  isHigher?: boolean;
 }
 
 export function ConnectButton({ label, isHigher }: ConnectButtonProps) {
@@ -12,9 +12,9 @@ export function ConnectButton({ label, isHigher }: ConnectButtonProps) {
     <button
       className={styles.button}
       style={{ height: isHigher ? 50 : 38 }}
-      onClick={setAllowed}
+      onClick={requestAccess}
     >
       {label}
     </button>
-  )
+  );
 }

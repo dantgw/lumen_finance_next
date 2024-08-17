@@ -38,3 +38,24 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+
+###
+Hello World
+Contract id: CAHCGSKUMFLMNVTCHUUVKKYO65OQRBFHMUGWP3OMDCR2VLCDDFCM3ZIB
+
+## Deploy
+
+stellar contract install \
+  --network testnet \
+  --source bob \
+  --wasm target/wasm32-unknown-unknown/release/lumen_finance_contract.wasm
+
+
+stellar contract deploy \
+  --wasm-hash 29aa140eb8fd57df7bd0ca2366e115752970310b26d290135a3796e66663a693 \
+  --source bob \
+  --network testnet
+
+## Lumen Finance Contract ID:
+CDLCXVC4JPATLFEOQGY736RQLT3MWMM2QC46CRI36FL4HZA35UU3E5UO
